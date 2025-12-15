@@ -23,7 +23,7 @@ year=int(year)
 
 
 #df = pd.read_csv(f'Historico.csv')
-df = pd.read_pickle('Historico.csv', compression='zip')
+df = pd.read_pickle('Historico.zip', compression='zip')
 
 rt_ag = rt_ag2 = sorted(set({x for x in df['Agência'] if x == x}))
 rt_ag2.append("Supervisão ou outros técnicos")
@@ -393,6 +393,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
