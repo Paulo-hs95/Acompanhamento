@@ -1,9 +1,3 @@
 plotly
 pandas 
 numpy 
-time
-calendar
-datetime
-calendar
-collections
-string
