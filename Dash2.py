@@ -391,7 +391,7 @@ for v1 in rt_tp:
 st.text(f'Total de dias no ano: {t}')
 
 
-col1.plotly_chart(fig1, config=config)
+col1.plotly_chart(fig1)
 col2.plotly_chart(fig2)
 col3.plotly_chart(fig3)
 col4.plotly_chart(fig4)
@@ -403,6 +403,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
