@@ -1,9 +1,7 @@
-
-plotly.express 
+plotly
 pandas 
 numpy 
 streamlit
-plotly.figure_factory
 time
 calendar
 datetime
