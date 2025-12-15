@@ -12,6 +12,17 @@ from collections import defaultdict
 from collections import Counter
 import string
 
+config = {
+    "modeBarButtonsToRemove": [
+        "zoom2d",       # Remove zoom button
+        "pan2d",        # Remove pan button
+        "select2d",     # Remove box select
+        "lasso2d",      # Remove lasso select
+        "resetScale2d"  # Remove reset axes
+    ],
+    "displaylogo": False  # Remove Plotly logo
+}
+
 
 today = datetime.now()
 current_date_str = today.strftime("%d/%m/%Y")
@@ -381,7 +392,7 @@ for v1 in rt_tp:
 st.text(f'Total de dias no ano: {t}')
 
 
-col1.plotly_chart(fig1)
+col1.plotly_chart(fig1(config=config))
 col2.plotly_chart(fig2)
 col3.plotly_chart(fig3)
 col4.plotly_chart(fig4)
@@ -393,6 +404,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
