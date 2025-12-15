@@ -223,9 +223,9 @@ for v1 in rt_tp:
 				        			row.append(f"{z[i, j]:.0f}")
 				        		g=g+1
 				        	hover_text.append(row)
-
+						
 				        exec(f'fig{month+1} = ff.create_annotated_heatmap(z, x=x, y=y1, annotation_text=z_text28, colorscale=colorscale, text=hover_text, hoverinfo="text")')
-				        exec(f'fig{month+1}.update_layout(title_text = f"Produtividade mês de {m[month]}")')
+				        exec(f'fig{month+1}.update_layout(title_text = f"Produtividade mês de {m[month]}", xaxis=dict(range=[0, 10]), yaxis=dict(range=[0, 10]))')
 
 
 
@@ -395,6 +395,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
