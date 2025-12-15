@@ -283,7 +283,9 @@ for v1 in rt_tp:
 
 				        exec(f'fig{month+1} = ff.create_annotated_heatmap(z, x=x, y=y, annotation_text=z_text29, colorscale=colorscale, text=hover_text, hoverinfo="text")')
 				        exec(f'fig{month+1}.update_layout(title_text = f"Produtividade mês de {m[month]}")')
-				        
+				        exec(f'fig{month+1}.update_xaxes(fixedrange=True)')
+				        exec(f'fig{month+1}.update_yaxes(fixedrange=True)')	
+						
 				    elif calendar.monthrange(year, month+1)[1] == 30:
 				        
 				        z_text30 = [['29', '30', '', '', '', '', ''],
@@ -334,7 +336,9 @@ for v1 in rt_tp:
 
 				        exec(f'fig{month+1} = ff.create_annotated_heatmap(z, x=x, y=y, annotation_text=z_text30, colorscale=colorscale, text=hover_text, hoverinfo="text")')
 				        exec(f'fig{month+1}.update_layout(title_text = f"Produtividade mês de {m[month]}")')
-				        
+				        exec(f'fig{month+1}.update_xaxes(fixedrange=True)')
+				        exec(f'fig{month+1}.update_yaxes(fixedrange=True)')
+						
 				    elif calendar.monthrange(year, month+1)[1] == 31:
 				        
 				        z_text31 = [['29', '30', '31', '', '', '', ''],
@@ -381,7 +385,9 @@ for v1 in rt_tp:
 
 				        exec(f'fig{month+1} = ff.create_annotated_heatmap(z, x=x, y=y, annotation_text=z_text31, colorscale=colorscale, text=hover_text, hoverinfo="text")')
 				        exec(f'fig{month+1}.update_layout(title_text = f"Produtividade mês de {m[month]}")')
-
+				        exec(f'fig{month+1}.update_xaxes(fixedrange=True)')
+				        exec(f'fig{month+1}.update_yaxes(fixedrange=True)')
+						
 st.text(f'Total de dias no ano: {t}')
 
 
@@ -397,6 +403,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
