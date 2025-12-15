@@ -1,15 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-# Run this app with `python app.py` and
-# visit http://127.0.0.1:8050/ in your web browser.
-
-
-# In[3]:
-
 
 import plotly.express as px
 import pandas as pd
@@ -24,7 +12,6 @@ from collections import defaultdict
 from collections import Counter
 import string
 
-# In[4]:
 
 today = datetime.now()
 current_date_str = today.strftime("%d/%m/%Y")
@@ -35,14 +22,7 @@ year = today.strftime("%Y")
 year=int(year)
 
 
-
-
-
-
-#app = Dash()
-low_memory=False
 df = pd.read_csv(f'Historico.csv')
-
 
 rt_ag = rt_ag2 = sorted(set({x for x in df['Agência'] if x == x}))
 rt_ag2.append("Supervisão ou outros técnicos")
@@ -400,9 +380,6 @@ for v1 in rt_tp:
 st.text(f'Total de dias no ano: {t}')
 
 
-	
-		
-	#fig.show()
 col1.plotly_chart(fig1)
 col2.plotly_chart(fig2)
 col3.plotly_chart(fig3)
@@ -415,6 +392,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
