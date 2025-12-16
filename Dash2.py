@@ -193,6 +193,10 @@ for v1 in rt_tp:
 				        for i in range(28):
 				        	t=t+1
 				        	dd=dd+1
+				        	if month+1<10:
+				        		dia=f"0{month+1}/{dd}/{year}"
+				        	else:
+				        		dia=f"{month+1}/{dd}/{year}"
 				        	dia=f"{month+1}/{dd}/{year}"
 				        	a[i+1] = len(filtro[filtro['DataAlteração'].str.contains(dia)])
 				        	if a[i+1]>0:
@@ -304,7 +308,10 @@ for v1 in rt_tp:
 				        for i in range(30):
 				        	t=t+1
 				        	dd=dd+1
-				        	dia=f"{month+1}/{dd}/{year}"
+				        	if month+1<10:
+				        		dia=f"0{month+1}/{dd}/{year}"
+				        	else:
+				        		dia=f"{month+1}/{dd}/{year}"
 				        	a[i+1] = len(filtro[filtro['DataAlteração'].str.contains(dia)])
 				        	if a[i+1]>max:
 				        		max=a[i+1]
@@ -357,7 +364,10 @@ for v1 in rt_tp:
 				        for i in range(31):
 				        	t=t+1
 				        	dd=dd+1
-				        	dia=f"{month+1}/{dd}/{year}"
+				        	if month+1<10:
+				        		dia=f"0{month+1}/{dd}/{year}"
+				        	else:
+				        		dia=f"{month+1}/{dd}/{year}"
 				        	a[i+1] = len(filtro[filtro['DataAlteração'].str.contains(dia)])
 				        	st.text(filtro[filtro['DataAlteração'].str.contains(dia)])
 				        	if a[i+1]>0.01:
@@ -407,6 +417,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
