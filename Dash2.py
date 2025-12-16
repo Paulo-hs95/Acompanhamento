@@ -249,9 +249,9 @@ for v1 in rt_tp:
 				        for i in range(29):
 				        	t=t+1
 				        	dd=dd+1
-				        	if month+1<10
+				        	if month+1<10:
 				        		dia=f"0{month+1}/{dd}/{year}"
-				        	else
+							else:
 				        		dia=f"{month+1}/{dd}/{year}"
 				        	a[i+1] = len(filtro[filtro['DataAlteração'].str.contains(dia)])
 				        	if a[i+1]>max:
@@ -407,6 +407,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
