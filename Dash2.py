@@ -355,7 +355,8 @@ for v1 in rt_tp:
 				        	t=t+1
 				        	dd=dd+1
 				        	dia=f"{month+1}/{dd}/{year}"
-				        	a[i+1] = len(filtro[filtro['DataAlteração'].str.contains(dia)])
+				        	dia2=f"1{month+1}/{dd}/{year}"
+				        	a[i+1] = len(filtro[(filtro['DataAlteração'].str.contains(dia)) & (~filtro['DataAlteração'].str.contains(dia2))])
 				        	if a[i+1]>0.01:
 				        		h1=1
 				        if h1==1:
@@ -403,6 +404,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
