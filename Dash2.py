@@ -351,7 +351,7 @@ for v1 in rt_tp:
 				        max=0
 				        dd=0
 				        h1=0
-						st.text(filtro[filtro['DataAlteração'].str.contains(dia)])
+				        st.text(filtro[filtro['DataAlteração'].str.contains(dia)])
 				        for i in range(31):
 				        	t=t+1
 				        	dd=dd+1
@@ -404,6 +404,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
