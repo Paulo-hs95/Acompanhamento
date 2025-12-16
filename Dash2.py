@@ -169,9 +169,9 @@ for v1 in rt_tp:
 				elif (grafico_tipo3 == "Supervisão ou outros técnicos") & (grafico_tipo == "Todas") & (grafico_tipo2 == "Todos"):
 					filtro = df[df['Agência'].isnull()]				
 				elif (grafico_tipo3 == "Supervisão ou outros técnicos") & (grafico_tipo == "Todas") & (grafico_tipo2 != "Todos"):
-					filtro = df[(df['Responsavel'] == v2.upper()) & (df['Agência'].isnull())]
+					filtro = df[(df['Responsavel'] == v2.upper())]
 				elif (grafico_tipo3 == "Supervisão ou outros técnicos") & (grafico_tipo != "Todas") & (grafico_tipo2 == v2):
-					filtro = df[(df['Responsavel'] == v2.upper()) & (df['Tipo'] == v1) & (df['Agência'].isnull())]				
+					filtro = df[(df['Responsavel'] == v2.upper()) & (df['Tipo'] == v1)]				
 				else:
 					filtro = df[(df['Responsavel'] == v2.upper()) & (df['Agência'] == v3) & (df['Tipo'] == v1)]
 
@@ -403,6 +403,7 @@ col9.plotly_chart(fig9)
 col10.plotly_chart(fig10)
 col11.plotly_chart(fig11)
 col12.plotly_chart(fig12)
+
 
 
 
